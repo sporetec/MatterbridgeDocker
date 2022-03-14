@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  matterbridge:
+    image: local/matterbridge
+    container_name: matterbridge
+    restart: unless-stopped
+    volumes:
+      - ./matterbridge.toml:/etc/matterbridge/matterbridge.toml:ro
+    #command: -debug
